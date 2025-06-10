@@ -173,28 +173,29 @@ app.post('/api/contact', (req, res) => {
 
 //  Water Requests
 app.post('/api/request-water', async (req, res) => {
-  const { litres, urgency, contact } = req.body;
+  const { litres, urgency, contact, reservoir_id } = req.body;
 
   if (!req.session.user || !req.session.user.id) {
     return res.status(401).json({ message: 'You must be logged in.' });
   }
 
-  if (!litres || !urgency || !contact) {
+  if (!litres || !urgency || !contact || !reservoir_id) {
     return res.status(400).json({ message: 'Missing required fields' });
   }
 
   try {
     await pool.query(
-      `INSERT INTO "synopticProjectRegistration".water_requests (litres, urgency, user_id ,contact_info, request_completed)
-       VALUES ($1, $2, $3, $4, $5)`,
-      [litres, urgency, req.session.user.id, contact, false]
+      `INSERT INTO "synopticProjectRegistration".water_requests (litres, urgency, user_id, contact_info, request_completed, reservoir_id)
+       VALUES ($1, $2, $3, $4, $5, $6)`,
+      [litres, urgency, req.session.user.id, contact, false, reservoir_id]
     );
 
     io.emit('new-request', {
       userId: req.session.user.id,
       litres,
       urgency,
-      contact
+      contact,
+      reservoir_id
     });
 
     res.json({ message: 'Water request submitted!' });
@@ -271,6 +272,22 @@ app.get('/api/trades', isAuthenticated, async (req, res) => {
     res.status(500).json({ message: 'Failed to load trades' });
   }
 });
+
+
+// Reservoirs
+
+
+app.get('/api/reservoirs', async (req, res) => {
+  try {
+    const result = await pool.query(
+      `SELECT id, name, capacity, current_level, status FROM "synopticProjectRegistration".reservoirs ORDER BY id`
+    );
+    res.json(result.rows);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to load reservoirs' });
+  }
+});
+
 
 // -------------------- Start Server --------------------
 server.listen(port, () => {

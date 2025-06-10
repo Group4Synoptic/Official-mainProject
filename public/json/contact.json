@@ -7,14 +7,6 @@
       "message": "I have a question about your services.",
       "contactReason": "General",
       "timestamp": "2024-12-07T08:00:00Z"
-    },
-    {
-      "firstName": "c",
-      "lastName": "d",
-      "email": "c@c.com",
-      "message": "hi",
-      "contactReason": "general",
-      "timestamp": "2025-06-05T22:20:09.215Z"
     }
   ]
 }

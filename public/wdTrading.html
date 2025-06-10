@@ -11,7 +11,7 @@
   <!-- Main CSS & JS -->
   <link rel="stylesheet" href="css/design.css" /> 
   <script src="js/getData.js" defer></script> 
-
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -119,6 +119,8 @@
           <option value="high">High</option>
         </select>
       </div>
+      <label for="reservoir-select">Choose Water Source:</label>
+      <select id="reservoir-select" name="reservoir_id" required></select>
       <div class="input-group">
         <label for="contact">Contact Info:</label>
         <input type="text" id="contact" name="contact" placeholder="Email or phone" required />
@@ -162,6 +164,9 @@
   </div>
 </main>
 
+<div id="reservoir-graph-container">
+  <canvas id="reservoir-graph" width="600" height="350"></canvas>
+</div>
 
   <!-- FOOTER SECTION -->
   <footer>
