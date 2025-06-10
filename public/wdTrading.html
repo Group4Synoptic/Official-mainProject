@@ -11,7 +11,7 @@
   <!-- Main CSS & JS -->
   <link rel="stylesheet" href="css/design.css" /> 
   <script src="js/getData.js" defer></script> 
-  <script src="js/trade-handler.js" defer></script>
+
 </head>
 
 <body>
@@ -33,10 +33,10 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle">Our Goals <span class="dropdown-arrow">&#9662;</span></a>
           <div class="dropdown-content">
-                    <a href="goals.html" class="dropdown-main-link">Our Goals</a>
-                    <a href="climate.html">Clean Water</a>
-                    <a href="energy.html">Sustainable Energy</a>
-                    <a href="hunger.html">Community</a>
+            <a href="goals.html" class="dropdown-main-link">Our Goals</a>
+            <a href="climate.html">Clean Water</a>
+            <a href="energy.html">Sustainable Energy</a>
+            <a href="hunger.html">Community</a>
           </div>
         </li>
         <li class="dropdown">
@@ -70,10 +70,10 @@
         <!-- Dropdown panel for Our Goals -->
         <div class="dropdown-content">
           <!-- Main link at top, centered -->
-                    <a href="goals.html" class="dropdown-main-link">Our Goals</a>
-                    <a href="climate.html">Clean Water</a>
-                    <a href="energy.html">Sustainable Energy</a>
-                    <a href="hunger.html">Community</a>
+          <a href="goals.html" class="dropdown-main-link">Our Goals</a>
+          <a href="climate.html">Clean Water</a>
+          <a href="energy.html">Sustainable Energy</a>
+          <a href="hunger.html">Community</a>
           <!-- Back button styled as menu link -->
           <button class="dropdown-back">← Back</button>
         </div>
@@ -98,69 +98,69 @@
   </div>
 
   <!-- MAIN CONTENT SECTION -->
-  <main>
-    <div class="auth-container">
-      <!-- Page title for context -->
-      <h1 class="auth-title">Request Water or Electricity</h1>
-      <!--  request form -->
+ <main>
+  <!-- Page title for context -->
+  <h1 class="auth-title">Request Water or Electricity</h1>
+  
+  <!-- Container for both forms -->
+  <div class="forms-container">
+    <!-- Water request form -->
+    <form id="water-request-form" autocomplete="off">
+      <div class="input-group">
+        <label for="litres">Water Amount (litres):</label>
+        <input type="number" id="litres" name="litres" min="1" required placeholder="e.g. 100" />
+      </div>
+      <div class="input-group">
+        <label for="urgency">Urgency Level:</label>
+        <select id="urgency" name="urgency" required>
+          <option value="" disabled selected>Select urgency</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="contact">Contact Info:</label>
+        <input type="text" id="contact" name="contact" placeholder="Email or phone" required />
+      </div>
+      <button type="submit">Submit Request</button>
+    </form>
 
-      <form id="water-request-form" autocomplete="off">
-        <div class="input-group">
-          <label for="litres">Water Amount (litres):</label>
-          <input type="number" id="litres" name="litres" min="1" required placeholder="e.g. 100" />
-        </div>
-        <div class="input-group">
-          <label for="urgency">Urgency Level:</label>
-          <select id="urgency" name="urgency" required>
-            <option value="" disabled selected>Select urgency</option>
-            <option value="low">Low</option>
-            <option value="medium">Medium</option>
-            <option value="high">High</option>
-          </select>
-        </div>
-        <div class="input-group">
-          <label for="contact">Contact Info:</label>
-          <input type="text" id="contact" name="contact" placeholder="Email or phone" required />
-        </div>
-        <button type="submit">Submit Request</button>
+    <!-- Trade form -->
+    <form id="trade-form" autocomplete="off">
+      <div class="input-group">
+        <label for="trade-direction">Trade Direction:</label>
+        <select id="trade-direction" required>
+          <option value="" disabled selected>Select trade type</option>
+          <option value="water_to_electricity">Water → Electricity</option>
+          <option value="electricity_to_water">Electricity → Water</option>
+        </select>
+      </div>
 
-      </form>
-    </div>
-    
-<form id="trade-form" autocomplete="off">
-  <div class="input-group">
-    <label for="trade-direction">Trade Direction:</label>
-    <select id="trade-direction" required>
-      <option value="" disabled selected>Select trade type</option>
-      <option value="water_to_electricity">Water → Electricity</option>
-      <option value="electricity_to_water">Electricity → Water</option>
-    </select>
+      <div class="input-group">
+        <label for="trade-amount">Amount:</label>
+        <input type="number" id="trade-amount" min="1" required placeholder="Enter amount (Litres/Watts)" />
+      </div>
+
+      <div class="input-group">
+        <label for="trade-contact">Contact Info:</label>
+        <input type="text" id="trade-contact" required placeholder="Email or phone" />
+      </div>
+
+      <div class="input-group">
+        <p>You will receive:<span id="trade-result">-</span></p>
+      </div>
+
+      <button type="submit">Submit Trade</button>
+    </form>
   </div>
 
-  <div class="input-group">
-    <label for="trade-amount">Amount:</label>
-    <input type="number" id="trade-amount" min="1" required placeholder="Enter amount" />
+  <!-- Current requests section -->
+  <div id="current_requests">
+    <h2>Current Requests And Trades</h2>
+    <ul id="water-requests-list"></ul>
   </div>
-
-  <div class="input-group">
-    <label for="trade-contact">Contact Info:</label>
-    <input type="text" id="trade-contact" required placeholder="Email or phone" />
-  </div>
-
-  <div class="input-group">
-    <p>You will receive:<span id="trade-result">-</span></p>
-  </div>
-
-  <button type="submit">Submit Trade</button>
-</form>
-
-
-    <!-- Current requests section  -->
-    <div id="current_requests" style="border: 2px solid #000; width: 70%; margin: 2em auto;">
-      <h2>Current Requests</h2>
-      <ul id="water-requests-list"></ul>
-    </div>
-  </main>
+</main>
 
 
   <!-- FOOTER SECTION -->
@@ -183,6 +183,6 @@
 </div>
   </footer>
     <script src="/socket.io/socket.io.js"></script>
-    <script src="js/water-request.js"></script>
+    <script src="js/requests-and-trades.js"></script>
 </body>
 </html>
