@@ -288,8 +288,46 @@ app.get('/api/reservoirs', async (req, res) => {
   }
 });
 
-
 // -------------------- Start Server --------------------
 server.listen(port, () => {
   console.log(`myapp is listening on port ${port}!`);
 });
+
+
+
+// --- ADMIN: List all requests ---
+app.get('/api/admin/requests', async (req, res) => {
+  try {
+    const result = await pool.query(
+      `SELECT id, user_id, litres, urgency, reservoir_id, request_completed, contact_info
+       FROM "synopticProjectRegistration".water_requests
+       ORDER BY id DESC`
+    );
+    res.json(result.rows);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to load requests' });
+  }
+});
+
+// --- ADMIN: Accept/complete a request and update reservoir ---
+app.post('/api/admin/accept-request', async (req, res) => {
+  const { id, reservoir_id, litres } = req.body;
+  try {
+    // Mark request as completed
+    await pool.query(
+      `UPDATE "synopticProjectRegistration".water_requests SET request_completed = true WHERE id = $1`,
+      [id]
+    );
+    // Subtract litres from reservoir
+    await pool.query(
+      `UPDATE "synopticProjectRegistration".reservoirs SET current_level = GREATEST(current_level - $1, 0) WHERE id = $2`,
+      [litres, reservoir_id]
+    );
+    // Notify all clients
+    io.emit('request-updated', { id, reservoir_id, litres });
+    res.json({ success: true });
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to update request/reservoir' });
+  }
+});
+

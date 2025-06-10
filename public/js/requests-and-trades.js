@@ -14,6 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
     requestsList.appendChild(item);
   });
 
+  socket.on('request-updated', () => {
+  renderReservoirGraph();
+  loadAll();
+});
+
   // When a new trade is made, add it to the list
   socket.on('new-trade', (data) => {
     const item = document.createElement('li');
@@ -86,7 +91,29 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (err) {
       console.error('Error loading water requests:', err);
     }
+  // --- TRADE CONVERSION CALCULATION ---
+  const tradeDirection = document.getElementById('trade-direction');
+  const tradeAmount = document.getElementById('trade-amount');
+  const tradeResult = document.getElementById('trade-result');
 
+  function updateTradeResult() {
+    const direction = tradeDirection.value;
+    const amount = Number(tradeAmount.value);
+    let result = '-';
+    if (direction && amount > 0) {
+      if (direction === 'water_to_electricity') {
+        result = (amount * 0.05) + ' kWh';
+      } else if (direction === 'electricity_to_water') {
+        result = (amount * 20) + ' litres';
+      }
+    }
+    tradeResult.textContent = result;
+  }
+
+  if (tradeDirection && tradeAmount) {
+    tradeDirection.addEventListener('change', updateTradeResult);
+    tradeAmount.addEventListener('input', updateTradeResult);
+  }
     // Load trades
     try {
       const tradeRes = await fetch('/api/trades');
@@ -154,7 +181,9 @@ async function renderReservoirGraph() {
 
   // Calculate total requested per reservoir
   const requestedMap = {};
-  requests.forEach(req => {
+  requests
+  .filter(req => !req.request_completed) 
+  .forEach(req => {
     if (!requestedMap[req.reservoir_id]) requestedMap[req.reservoir_id] = 0;
     requestedMap[req.reservoir_id] += Number(req.litres);
   });
@@ -194,3 +223,5 @@ async function renderReservoirGraph() {
     }
   });
 }
+
+
