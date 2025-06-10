@@ -7,6 +7,15 @@ CREATE TABLE IF NOT EXISTS "synopticProjectRegistration".users (
   email VARCHAR(255) UNIQUE NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS "synopticProjectRegistration".reservoirs (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  capacity DECIMAL NOT NULL, -- total capacity in litres
+  current_level DECIMAL NOT NULL, -- current water available in litres
+  status VARCHAR(20) NOT NULL DEFAULT 'active' -- 'active' or 'maintenance'
+);
+
+
 CREATE TABLE IF NOT EXISTS "synopticProjectRegistration".water_requests (
   id SERIAL PRIMARY KEY,
   litres DECIMAL NOT NULL,
@@ -14,8 +23,9 @@ CREATE TABLE IF NOT EXISTS "synopticProjectRegistration".water_requests (
   contact_info VARCHAR(255) NOT NULL,
   user_id VARCHAR(255) NOT NULL,
   request_completed BOOLEAN NOT NULL,
-  requested_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
-
+  requested_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  reservoir_id INTEGER REFERENCES "synopticProjectRegistration".reservoirs(id) 
+);
 
 CREATE TABLE IF NOT EXISTS "synopticProjectRegistration".water_energy_trades (
   id SERIAL PRIMARY KEY,
@@ -27,13 +37,6 @@ CREATE TABLE IF NOT EXISTS "synopticProjectRegistration".water_energy_trades (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE IF NOT EXISTS "synopticProjectRegistration".reservoirs (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(100) NOT NULL,
-  capacity DECIMAL NOT NULL, -- total capacity in litres
-  current_level DECIMAL NOT NULL, -- current water available in litres
-  status VARCHAR(20) NOT NULL DEFAULT 'active' -- 'active' or 'maintenance'
-);
 
 INSERT INTO "synopticProjectRegistration".reservoirs (name, capacity, current_level, status) VALUES
 ('North Valley Reservoir', 100000, 80000, 'active'),
