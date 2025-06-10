@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Smart Water Monitoring System Homepage" />
+  <meta name="keywords" content="Makers Valley, Water, Energy, Sustainability" />
+  <meta name="author" content="Stevo Asante" />
+  <title>ECO4ROWTH - Smart Water Monitoring</title>
+
+  <!-- Link to the main CSS & JS files -->
+  <link rel="stylesheet" href="css/design.css" /> 
+  <script src="js/getData.js" defer></script> 
+  <script src="js/login.js"></script>
+  <script src="js/session.js"></script>
+</head>
+
+<body>
+  <!-- HERO SECTION (BANNER GOES FIRST) -->
+  <section class="hero">
+    <div class="hero-content fade-in">
+      <h2>Empowering Clean Water in Makers Valley</h2>
+      <p>Real-time insights, leak alerts, and community energy management — all in one platform.</p>
+      <a href="WDTrading.html" class="hero-btn">View Water Dashboard</a>
+    </div>
+
+      <!-- LOGIN BUTTON-->
+    <button id="registerBtn">Register</button>
+    <button id="loginBtn">Login</button>
+    <button id="logoutBtn">Logout</button>
+
+    <h1 id="welcome-message">Loading...</h1>
+
+  </section>
+
+
+
+
+  <!-- NAVIGATION BAR -->
+  <nav class="nav-wrapper" id="navbar">
+    <div class="nav-content">
+      <!-- Hamburger always far left -->
+      <button id="hamburger" class="hamburger" aria-label="Toggle menu">&#9776;</button>
+      <!-- Logo centered -->
+      <div class="logo-center">
+        <a href="index.html">
+          <img src="assets/WhiteFinal.png" alt="Logo" class="logo-image" />
+        </a>
+      </div>
+      <!-- Desktop menu (centered) -->
+      <ul class="menu" id="menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">Team</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Our Goals <span class="dropdown-arrow">&#9662;</span></a>
+          <div class="dropdown-content">
+            <a href="goals.html" class="dropdown-main-link">Our Goals</a>
+            <a href="climate.html">Clean Water</a>
+            <a href="energy.html">Sustainable Energy</a>
+            <a href="hunger.html">Community</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Water Demands <span class="dropdown-arrow">&#9662;</span></a>
+          <div class="dropdown-content">
+            <a href="wd.html" class="dropdown-main-link">Water Demands</a>
+            <a href="wdTrading.html">Trade Water & Electricity</a>
+            <a href="findwd.html">Our Water Reservoirs</a>
+          </div>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <!-- Search bar on the right -->
+      <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search..." />
+        <button id="search-button">SEARCH</button>
+      </div>
+    </div>
+  </nav>
+
+    <!-- MOBILE FULLSCREEN MENU OVERLAY -->
+    <!-- Hamburger/X button is always visible in top left for closing -->
+    <div class="menu-overlay">
+      <!-- Hamburger/X button for closing the overlay -->
+      <button id="close-menu" class="hamburger close-hamburger" aria-label="Close menu"></button>
+      <ul class="menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">Team</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Our Goals <span class="dropdown-arrow">&#9662;</span></a>
+          <!-- Dropdown panel for Our Goals -->
+          <div class="dropdown-content">
+            <!-- Main link at top, centered -->
+            <a href="goals.html" class="dropdown-main-link">Our Goals</a>
+            <a href="climate.html">Clean Water</a>
+            <a href="energy.html">Sustainable Energy</a>
+            <a href="hunger.html">Community</a>
+            <!-- Back button styled as menu link -->
+            <button class="dropdown-back">← Back</button>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Water Demands <span class="dropdown-arrow">&#9662;</span></a>
+          <!-- Dropdown panel for Water Demands -->
+          <div class="dropdown-content">
+            <a href="WD.html" class="dropdown-main-link">Water Demands</a>
+            <a href="wdTrading.html">Trade Water & Electricity</a>
+            <a href="findwd.html">Our Water Reservoirs</a>
+            <button class="dropdown-back">← Back</button>
+          </div>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+  <!-- MAIN CONTENT SECTION -->
+  <main>
+    <!-- HEADING CONTENT -->
+    <h2>Welcome To ECO4ROWTH</h2>
+    <p>EcoGrowth drives impactful sustainable development initiatives, connecting innovative projects with resources and partners committed to positive global change. 
+        <br> Join us in making a lasting difference!</p>
+
+    <!-- ARTICLE WITH 2 FADE-IN SECTIONS -->
+    <article>
+        <!-- VIDEO SECTION -->
+        <section  class="sec fade-in">
+          <video id="HomeVideo" src="assets/The SDG Report 2024.mp4" controls></video>
+        </section>
+
+        <br>
+
+      <!-- MISSION STATEMENT SECTION -->
+      <section class="sec fade-in">
+        <h2>Our Mission & Values</h2>
+        <p>
+        EcoGrowth is committed to creating a sustainable future by empowering communities, fostering innovation, and promoting environmental responsibility. 
+
+        Our mission as EcoGrowth is to design and implement a solar-powered water filtration system that provides safe, reliable, and affordable water while 
+        supplying renewable electricity to support essential needs. 
+        </p>
+      </section>
+
+<br>
+
+      <section id="EWBLink" class="sec fade-in">
+        <h2>Join Our Sustainability Movement</h2>
+        <p>
+        To learn more or support the ongoing efforts in South Africa by Makers Valley Partnership and Engineers Without Borders South Africa, 
+        please visit their site below.
+        </p>
+        <a id="UNLink" href="https://www.ewbsa.org" target="_blank">
+            Engineers Without Borders South Africa
+        </a>
+    </section>
+    
+</article>
+</main>
+<br>
+<br>
+
+  <!-- FOOTER SECTION -->
+  <footer>
+    <p>
+      © 2025 ECO4ROWTH - Group 4 in partnership with EWB <br /><br />
+      <a id="CULink" href="contact.html">Contact us</a>
+    </p>
+    <!-- Accessibility controls: dark mode and font size -->
+    <div class="accessibility-controls">
+      <!-- Dark mode toggle as a slider switch -->
+      <label class="switch" aria-label="Toggle dark mode">
+        <input type="checkbox" id="toggle-dark" />
+        <span class="slider"></span>
+        <span class="switch-label">Dark Mode</span>
+      </label>
+      <!-- Font size controls -->
+      <button id="increase-font" aria-label="Increase font size">A+</button>
+      <button id="decrease-font" aria-label="Decrease font size">A-</button>
+    </div>
+  </footer>
+  </body>
+</html>

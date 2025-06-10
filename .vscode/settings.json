@@ -1,0 +1,9 @@
+{
+    "liveServer.settings.port": 5501,
+    "explorer.fileNesting.enabled": false,
+    "explorer.fileNesting.expand": true,
+    "explorer.openEditors.sortOrder": "editorOrder",
+    "explorer.sortOrder": "type",
+    "explorer.sortOrderReverse": false,
+    "explorer.sortOrderLexicographicOptions": "default"
+}

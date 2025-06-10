@@ -1,0 +1,250 @@
+/* =============================================================
+   FORM STYLES - MATCHING MAIN STYLE (design.css)
+   ============================================================= */
+
+/* 
+   We use the same fonts and color variables as the main site for a consistent look.
+   If you use this file alone, you can copy the :root section from design.css.
+*/
+:root {
+  --primary-color: #003087;         /* Main blue color for borders and headings */
+  --secondary-color: #FFFFFF;       /* White, used for backgrounds */
+  --highlight-yellow: #FFCC00;      /* Yellow highlight for buttons and focus */
+  --black: #000000;                 /* Black for text */
+  --form-bg: #fcf6f6;               /* Light background for form areas */
+}
+
+/* 
+   The main form container. 
+   We use a soft background, rounded corners, and a subtle shadow for a modern look.
+   Font is set to Montserrat for consistency with the main site.
+*/
+.MyForm {
+    max-width: 600px;
+    margin: 2rem 1.5rem;
+    padding: 1.5rem;
+    border: 2px solid var(--primary-color); /* Blue border matches theme */
+    border-radius: 8px;
+    background-color: var(--form-bg);       /* Light background */
+    box-shadow: 0 4px 16px rgba(0, 48, 135, 0.08); /* Soft blue shadow */
+    font-family: 'Montserrat', sans-serif;  /* Main site font */
+}
+
+/* 
+   Remove default fieldset border and padding for a cleaner look.
+*/
+.MyForm fieldset {
+    border: none;
+    padding: 0;
+}
+
+/* 
+   The form legend (title) uses the heading font and theme color.
+*/
+.MyForm legend {
+    font-size: 1.5rem;
+    font-family: 'Michroma', sans-serif;    /* Heading font */
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* 
+   Label for each form field.
+   Uses the theme color and a serif font for readability.
+*/
+.formlabel {
+    display: block;
+    font-size: 1rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-family: 'Literata', serif;
+}
+
+/* 
+   Style for all input fields and textareas.
+   - Full width
+   - Rounded corners
+   - Blue border
+   - Montserrat font
+   - White background
+*/
+.MyForm input,
+.MyForm textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1.5px solid var(--primary-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    background-color: var(--secondary-color);
+    color: var(--black);
+    transition: border-color 0.3s;
+}
+
+/* 
+   Allow the textarea to be resized vertically, but not horizontally.
+*/
+.MyForm textarea {
+    resize: vertical; 
+    min-height: 120px;
+}
+
+/* 
+   When a user clicks into an input or textarea, 
+   highlight the border with the yellow theme color and add a soft glow.
+*/
+.MyForm input:focus,
+.MyForm textarea:focus {
+    outline: none;
+    border-color: var(--highlight-yellow);
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.2);
+}
+
+/* 
+   The submit button uses the yellow highlight color and heading font.
+   On hover, it turns blue with white text for clear feedback.
+*/
+.MyForm .msgbtn {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    color: var(--black);
+    background-color: var(--highlight-yellow);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Michroma', sans-serif;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.MyForm .msgbtn:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* 
+   Paragraph for extra contact info below the form.
+   Uses the theme color and a serif font for a friendly look.
+*/
+.ContactPara {
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 1rem;
+    font-family: 'Literata', serif;
+}
+
+/* 
+   Feedback messages (like "Thank you for your message!") use the theme color.
+*/
+.MyForm p {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--primary-color);
+    font-family: 'Literata', serif;
+}
+
+/* 
+   The form and map are side by side on large screens.
+   Uses a light background and soft shadow for separation.
+*/
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;  /* 2 parts for the form, 1 part for the map section */
+    gap: .5rem;  /* Space between the form and map section */
+    align-content: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,48,135,0.07);
+    padding: 2rem 3rem;
+}
+
+/* 
+   The map/info section uses a white background, blue border, and soft shadow.
+*/
+.info-section {
+    padding: 2rem;
+    background: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,48,135,0.07);
+    border: 2px solid var(--primary-color);
+}
+
+/* 
+   Style for the embedded map or iframe.
+   Dashed blue border and soft shadow for emphasis.
+*/
+.iframe {
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,48,135,0.08);
+    border: 3px dashed var(--primary-color);
+}
+
+/* 
+   Heading in the info section uses the heading font and theme color.
+*/
+.info-section h2 {
+    font-size: 1.5rem;
+    font-family: 'Michroma', sans-serif;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.ContactReason {
+    margin-bottom: 1rem;
+    min-width: 100%;
+    height: 2rem;
+    text-align: center;
+    text-emphasis: underline;
+    font-family: 'michroma', sans-serif;
+    font-size: 1rem;
+    font-weight: 1800px;
+    line-height: 2rem;
+    background-color: var(--secondary-color);
+    border: 1.5px solid var(--primary-color);
+    border-radius: 4px;
+}
+
+#map-container {
+    margin-top: 1rem;
+}
+
+/* 
+   Responsive: First name and last name side by side on larger screens.
+*/
+@media (min-width: 541px) {
+    .name-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;  
+    }
+
+    .name-container .formlabel {
+        width: 48%;  
+    }
+}
+
+/* 
+   Responsive: Stack form and map vertically on small screens (iPad and below).
+*/
+@media (max-width: 820px) {
+    .content-wrapper {
+        grid-template-columns: 1fr; 
+    }
+
+    .info-section {
+        margin-top: 2rem;  
+    }
+}

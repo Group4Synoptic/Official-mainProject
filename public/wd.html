@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Water Demands page - ECO4ROWTH" />
+  <meta name="keywords" content="Water Management, SDGs, Clean Water, Sustainability" />
+  <meta name="author" content="Stevo Asante" />
+  <title>Water Demands | ECO4ROWTH</title>
+
+  <!-- Link to the main CSS & JS files -->
+  <link rel="stylesheet" href="css/design.css" /> 
+  <script src="js/getData.js" defer></script> 
+</head>
+
+<body>
+  <!-- NAVIGATION BAR -->
+  <nav class="nav-wrapper" id="navbar">
+    <div class="nav-content">
+      <!-- Hamburger always far left -->
+      <button id="hamburger" class="hamburger" aria-label="Toggle menu">&#9776;</button>
+      <!-- Logo centered -->
+      <div class="logo-center">
+        <a href="index.html">
+          <img src="assets/WhiteFinal.png" alt="Logo" class="logo-image" />
+        </a>
+      </div>
+      <!-- Desktop menu (centered) -->
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Team</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Our Goals <span class="dropdown-arrow">&#9662;</span></a>
+          <div class="dropdown-content">
+                    <a href="goals.html" class="dropdown-main-link">Our Goals</a>
+                    <a href="climate.html">Clean Water</a>
+                    <a href="energy.html">Sustainable Energy</a>
+                    <a href="hunger.html">Community</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="active dropdown-toggle">Water Demands <span class="dropdown-arrow">&#9662;</span></a>
+          <div class="dropdown-content">
+            <a href="WD.html" class="active dropdown-main-link">Water Demands</a>
+            <a href="wdTrading.html">Trade Water & Electricity</a>
+            <a href="findwd.html">Our Water Reservoirs</a>
+          </div>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <!-- Search bar on the right -->
+      <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search..." />
+        <button id="search-button">SEARCH</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE FULLSCREEN MENU OVERLAY -->
+  <!-- Hamburger/X button is always visible in top left for closing -->
+  <div class="menu-overlay">
+    <!-- Hamburger/X button for closing the overlay -->
+    <button id="close-menu" class="hamburger close-hamburger" aria-label="Close menu"></button>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Team</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Our Goals <span class="dropdown-arrow">&#9662;</span></a>
+        <!-- Dropdown panel for Our Goals -->
+        <div class="dropdown-content">
+          <!-- Main link at top, centered -->
+                    <a href="goals.html" class="dropdown-main-link">Our Goals</a>
+                    <a href="climate.html">Clean Water</a>
+                    <a href="energy.html">Sustainable Energy</a>
+                    <a href="hunger.html">Community</a>
+          <!-- Back button styled as menu link -->
+          <button class="dropdown-back">← Back</button>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="active dropdown-toggle">Water Demands <span class="dropdown-arrow">&#9662;</span></a>
+        <!-- Dropdown panel for Water Demands -->
+        <div class="dropdown-content">
+          <a href="WD.html" class="active dropdown-main-link">Water Demands</a>
+          <a href="wdTrading.html">Trade Water & Electricity</a>
+          <a href="findwd.html">Our Water Reservoirs</a>
+          <button class="dropdown-back">← Back</button>
+        </div>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- MOBILE SEARCH OVERLAY -->
+  <div class="search-overlay">
+    <input type="text" placeholder="Type to search..." />
+  </div>
+
+  <!-- MAIN CONTENT SECTION -->
+  <main>
+    <!-- Heading Section -->
+    <section class="section-content fade-in">
+      <h2>Understanding Water Demands</h2>
+
+      <article class="WDHeading">
+        
+      <p>
+        Water is essential for life, yet access remains a challenge across many communities. 
+        Our system explores sustainable management and the technologies used to monitor water demand in Makers Valley.
+      </p>
+
+      <iframe id="WDVideo" style="flex-basis: 560px;" width="560" height="315" src="https://www.youtube.com/embed/ovN5CF94_Ow?si=UakdCCmmfEuY9pFc&amp;controls=0&amp;start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </article>
+    </section>
+
+    <article class="WDArticle fade-in">
+      <h2>Why Water Management Matters</h2>
+      <p>
+        Effective water management is crucial for ensuring that communities have access to clean and safe water. 
+        It helps in preventing water scarcity, managing resources efficiently, and promoting sustainable practices.
+      </p>
+        <!-- This is where the water demand cards will appear via JS -->
+    <section class="section-content fade-in">
+      <h2>Our Approach</h2>
+      <p>
+        We utilize innovative technologies to monitor water usage, detect leaks, and engage the community in sustainable practices. 
+        Our goal is to create a resilient water management system that benefits everyone in Makers Valley.
+      </p>
+      <img src="assets/Header.webp" alt="Water Management" class="section-image" />
+    </section>
+
+    <section class="section-content fade-in">
+      <h2>Water Demand Monitoring</h2>
+      <p>
+        Our dynamic water demand monitoring system provides real-time insights into water usage patterns, helping to identify leaks and optimize resource allocation.
+      </p>
+    </section>
+
+    <section class="section-content fade-in">
+      <h2>Community Impact</h2>
+      <p>
+        By engaging the community in water management, we aim to foster a culture of conservation and responsible usage, ensuring sustainable access for all.
+      </p>
+    </section>
+
+    <section class="section-content fade-in">
+      <h2>Technological Innovations</h2>
+      <p>
+        Our platform leverages cutting-edge technology to provide actionable insights, enabling proactive management of water resources.
+      </p>
+            <img src="assets/Header1.jpeg" alt="Water Management" class="section-image" />
+    </section>
+
+    <section class="section-content fade-in">
+      <h2>Join Us in Making a Difference</h2>
+      <p>
+        Together, we can create a sustainable future for Makers Valley by ensuring clean and accessible water for all.
+      </p>
+    </section>
+
+    <section class="section-content fade-in">
+      <h2>Get Involved</h2>
+      <p>
+        Interested in contributing to our water management initiatives? Contact us to learn how you can help.
+      </p>
+    </section>
+
+    <section class="section-content fade-in">
+      <h2>Learn More</h2>
+      <p>
+        Explore our resources to understand the challenges and solutions in water management.
+      </p>
+    </section>
+
+    <section class="section-content fade-in">
+      <h2>Stay Updated</h2>
+      <p>
+        Follow our progress and stay informed about our initiatives in Makers Valley.
+      </p>
+    </section>
+
+    </article> 
+
+  </main>
+
+  <!-- FOOTER SECTION -->
+  <footer>
+    <p>
+      © 2025 ECO4ROWTH - Group 4 in partnership with EWB <br /><br />
+      <a id="CULink" href="contact.html">Contact us</a>
+    </p>
+    <!-- Accessibility controls: dark mode and font size -->
+    <div class="accessibility-controls">
+      <!-- Dark mode toggle as a slider switch -->
+      <label class="switch" aria-label="Toggle dark mode">
+        <input type="checkbox" id="toggle-dark" />
+        <span class="slider"></span>
+        <span class="switch-label">Dark Mode</span>
+      </label>
+      <!-- Font size controls -->
+      <button id="increase-font" aria-label="Increase font size">A+</button>
+      <button id="decrease-font" aria-label="Decrease font size">A-</button>
+    </div>
+  </footer>
+  </body>
+</html>

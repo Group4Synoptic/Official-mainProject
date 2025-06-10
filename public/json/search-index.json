@@ -1,0 +1,97 @@
+[
+  {
+    "title": "Home",
+    "url": "index.html",
+    "content": "Smart Water Monitoring System Homepage. Welcome to ECO4ROWTH..."
+  },
+  {
+    "title": "Team",
+    "url": "about.html",
+    "content": "Meet our development team powering ECO4ROWTH..."
+  },
+  {
+    "title": "Our Goals",
+    "url": "goals.html",
+    "content": "Our Sustainable Development Goals: Climate Action, Clean Energy, Zero Hunger..."
+  },
+  {
+    "title": "Climate Action",
+    "url": "climate.html",
+    "content": "Climate Action details and projects..."
+  },
+  {
+    "title": "Clean Energy",
+    "url": "energy.html",
+    "content": "Clean Energy initiatives and information..."
+  },
+  {
+    "title": "Zero Hunger",
+    "url": "hunger.html",
+    "content": "Zero Hunger projects and information..."
+  },
+  {
+    "title": "Contact",
+    "url": "contact.html",
+    "content": "Contact us page for inquiries and feedback..."
+  },
+  {
+    "title": "Water Demands",
+    "url": "WD.html",
+    "content": "Overview of water needs, resource management, and community impact."
+  },
+  {
+    "title": "Trade Water & Electricity",
+    "url": "wdTrading.html",
+    "content": "Trade Water & Electricity between communities. Learn how our platform enables resource sharing and sustainable trading."
+  },
+  {
+    "title": "Offer Water",
+    "url": "wdOffer.html",
+    "content": "Offer Water to those in need. Submit your surplus water resources and help support others."
+  },
+  {
+    "title": "Register",
+    "url": "register.html",
+    "content": "Create an account to join ECO4ROWTH. Access exclusive features and participate in our community."
+  },
+  {
+    "title": "Login",
+    "url": "login.html",
+    "content": "Sign in to your ECO4ROWTH account to access personalized features and manage your profile."
+  },
+  {
+    "title": "Azeef",
+    "url": "about.html",
+    "content": "Azeef is a key member of our development team, contributing to the ECO4ROWTH project with expertise in software development and sustainability."
+  },
+  {
+    "title": "Kurt",
+    "url": "about.html",
+    "content": "Kurt is a vital part of our team, bringing innovative solutions and a passion for environmental sustainability to the ECO4ROWTH initiative."
+  },
+  {
+    "title": "Stevo",
+    "url": "about.html",
+    "content": "Stevo is a dedicated team member focused on enhancing the ECO4ROWTH platform and ensuring its success in promoting sustainable practices."
+  },
+  {
+    "title": "Caetan",
+    "url": "about.html",
+    "content": "Caetan is an integral part of our team, working on community engagement and outreach for the ECO4ROWTH project."
+  },
+  {
+    "title": "Sylvain",
+    "url": "about.html",
+    "content": "Sylvain contributes to the ECO4ROWTH initiative with a focus on data analysis and system optimization."
+  },
+  {
+    "title": "Kai",
+    "url": "about.html",
+    "content": "Kai is a passionate advocate for sustainable water practices and plays a key role in the ECO4ROWTH initiative."
+  },
+  {
+    "title": "ECO4ROWTH",
+    "url": "index.html",
+    "content": "ECO4ROWTH is a smart water monitoring system designed to promote sustainable water management and community engagement."
+  }
+]

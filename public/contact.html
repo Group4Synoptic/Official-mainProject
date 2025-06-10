@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact us page">
+    <meta name="keywords" content="Contact, Inquiry, Form, SDG">
+    <meta author="Stevo" content="Stevo Asante">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/design.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/signup.js" defer></script>
+    <script src="js/getData.js"></script> <!-- ADDED TO ENSURE HAMBURGER FUNCTIONALITY MOBILE - CDS-->
+</head>
+
+<body>
+  <!-- NAVIGATION BAR -->
+  <nav class="nav-wrapper" id="navbar">
+    <div class="nav-content">
+      <!-- Hamburger always far left -->
+      <button id="hamburger" class="hamburger" aria-label="Toggle menu">&#9776;</button>
+      <!-- Logo centered -->
+      <div class="logo-center">
+        <a href="index.html">
+          <img src="assets/WhiteFinal.png" alt="Logo" class="logo-image" />
+        </a>
+      </div>
+      <!-- Desktop menu (centered) -->
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Team</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Our Goals <span class="dropdown-arrow">&#9662;</span></a>
+          <div class="dropdown-content">
+            <a href="goals.html" class="dropdown-main-link">Our Goals</a>
+            <a href="climate.html">Clean Water</a>
+            <a href="energy.html">Sustainable Energy</a>
+            <a href="hunger.html">Community</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Water Demands <span class="dropdown-arrow">&#9662;</span></a>
+          <div class="dropdown-content">
+            <a href="wd.html" class="dropdown-main-link">Water Demands</a>
+            <a href="wdTrading.html">Trade Water & Electricity</a>
+            <a href="findwd.html">Our Water Reservoirs</a>
+          </div>
+        </li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <!-- Search bar on the right -->
+      <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search..." />
+        <button id="search-button">SEARCH</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE FULLSCREEN MENU OVERLAY -->
+  <!-- Hamburger/X button is always visible in top left for closing -->
+  <div class="menu-overlay">
+    <!-- Hamburger/X button for closing the overlay -->
+    <button id="close-menu" class="hamburger close-hamburger" aria-label="Close menu"></button>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Team</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Our Goals <span class="dropdown-arrow">&#9662;</span></a>
+        <!-- Dropdown panel for Our Goals -->
+        <div class="dropdown-content">
+          <!-- Main link at top, centered -->
+            <a href="goals.html" class="dropdown-main-link">Our Goals</a>
+            <a href="climate.html">Clean Water</a>
+            <a href="energy.html">Sustainable Energy</a>
+            <a href="hunger.html">Community</a>
+          <!-- Back button styled as menu link -->
+          <button class="dropdown-back">← Back</button>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Water Demands <span class="dropdown-arrow">&#9662;</span></a>
+        <!-- Dropdown panel for Water Demands -->
+        <div class="dropdown-content">
+          <a href="WD.html" class="dropdown-main-link">Water Demands</a>
+          <a href="wdTrading.html">Trade Water & Electricity</a>
+          <a href="findwd.html">Our Water Reservoirs</a>
+          <button class="dropdown-back">← Back</button>
+        </div>
+      </li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </div>
+
+
+   <main>
+       <section class="content-wrapper">
+            <!-- Contact Form Section -->
+            <section id="signup-section">
+                <h2></h2>
+                <p id="description"></p>
+
+                <form class="MyForm" id="myForm" method="post" action="#">
+                    <fieldset><legend>Get In Touch</legend>
+                        <p> We would love to hear from you! Please fill out the form below and we aim to get back to you within 48 Hours </p>
+                        <section class="name-container">
+                            <label class="formlabel">First Name<span>*</span>
+                                <input type="text" name="first-name" placeholder="e.g Cristiano" required/>
+                            </label>
+
+                            <label class="formlabel">Last Name<span>*</span>
+                                <input type="text" name="last-name" placeholder="e.g Ronaldo" required/>
+                            </label>
+                        </section>
+
+                        <label class="formlabel">Email<span>*</span>
+                            <input type="email" name="email" placeholder="CR7@example.co.uk" required/>
+                        </label>
+
+                        <label class="formlabel">Reason for contacting<span>*</span>
+                            <select class="ContactReason" name="contact-reason" required>
+                                <option value="general">General</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="careers">Careers/Volunteer</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </label>
+                        
+                        <label class="formlabel">Message<span>*</span>
+                            <textarea class="formlabel" name="message" required></textarea>
+                        </label>
+
+                        <input class="msgbtn" type="submit" value="Send Message">
+
+                    </fieldset>
+                    <p class="ContactPara"> * Required field </p>
+                </form>
+            </section>
+
+            <section class="info-section">
+            <!-- dynamically loaded from info.json  -->
+            </section>
+
+            </section>
+
+       </section>
+   </main>
+
+</body>
+
+  <!-- FOOTER SECTION -->
+  <footer>
+    <p>
+      © 2025 ECO4ROWTH - Group 4 in partnership with EWB <br /><br />
+      <a id="CULink" href="contact.html">Contact us</a>
+    </p>
+    <!-- Accessibility controls: dark mode and font size -->
+    <div class="accessibility-controls">
+      <!-- Dark mode toggle as a slider switch -->
+      <label class="switch" aria-label="Toggle dark mode">
+        <input type="checkbox" id="toggle-dark" />
+        <span class="slider"></span>
+        <span class="switch-label">Dark Mode</span>
+      </label>
+      <!-- Font size controls -->
+      <button id="increase-font" aria-label="Increase font size">A+</button>
+      <button id="decrease-font" aria-label="Decrease font size">A-</button>
+    </div>
+  </footer>
+  </body>
+</html>

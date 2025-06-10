@@ -1,0 +1,139 @@
+{
+  "goals": [
+    {
+      "title": "Clean Water",
+      "desc": "Promoting sustainable practices and reducing carbon footprint in Makers Valley.",
+      "link": "climate.html",
+      "image": "assets/crops.jpg"
+    },
+    {
+      "title": "Sustainable Energy",
+      "desc": "Expanding access to affordable, reliable, and modern energy in Makers Valley.",
+      "link": "energy.html",
+      "image": "assets/solarpanel.jpg.avif"
+    },
+    {
+      "title": "Community",
+      "desc": "Ensuring food security and improved nutrition through community gardens and local support.",
+      "link": "hunger.html",
+      "image": "assets/climate.jpg"
+    }
+  ],
+
+  "climate": [
+    {
+      "url": "assets/climate.jpg",
+      "alt": "Climate Awareness image",
+      "caption": [
+        "Climate change is an evergrowing issue in today's world, projected to worsen and deeply impact our environment and daily lives.",
+        "Those in under-developed countries will be the most affected, facing water and food shortages.",
+        "To address this, the UN has launched a set of regulations to combat Climate Change under the 2030 SDG agenda.",
+        "These include strengthening resilience to climate disasters, integrating climate policies, raising awareness, and global cooperation through the Paris Agreement.",
+        "Together, these initiatives support renewables, sustainable cities, and protect vulnerable communities for a low-carbon future."
+      ]
+    }
+  ],
+
+"WDSection": [
+  {
+    "url": "assets/Header1.jpeg",
+    "alt": "Water Meter Technology",
+    "caption": [
+      "Modern water meters offer real-time monitoring of household and industrial usage.",
+      "In Makers Valley, we’re piloting smart water meters that alert communities when leaks occur, helping conserve water and save costs."
+    ]
+  },
+  {
+    "url": "assets/Header1.jpeg",
+    "alt": "Community water usage",
+    "caption": [
+      "Over 2.2 billion people lack access to safe drinking water globally.",
+      "The UN’s SDG 6 aims to ensure availability and sustainable management of water for all by 2030.",
+      "We’re supporting community-driven systems that track water stress, availability, and usage trends in real-time."
+    ]
+  },
+  {
+    "url": "assets/Header1.jpeg",
+    "alt": "Water pipelines",
+    "caption": [
+      "Aging infrastructure often leads to high water loss.",
+      "Our smart dashboards integrate IoT sensors to detect pipeline issues early — preventing waste and protecting the supply chain."
+    ]
+  }
+],
+
+
+"team": [
+    {
+      "name": "Muhammad Azeef Bin Afrie",
+      "role": "Mood Board, Home Page",
+      "bio": "Azeef created the mood board for our visual identity and developed the homepage layout. He also contributed to the Goals page design.",
+      "image": "assets/Azeef.jpeg"
+    },
+    {
+      "name": "Kurt Canillas",
+      "role": "Goals Page, Documentation",
+      "bio": "Kurt wrote and compiled documentation for the website and helped develop the Goals content.",
+      "image": "assets/Kurt.png"
+    },
+    {
+      "name": "Stevo Asante",
+      "role": "Wireframe, Teams Page",
+      "bio": "Stevo designed the original wireframe and was lead developer for the Teams section and overall layout styling.",
+      "image": "assets/Stevo.jpeg"
+    },
+    {
+      "name": "Caetan De Sousa",
+      "role": "Contact Form",
+      "bio": "Caetan developed the contact form and styled the Contact page. He also supported Goal-related page sections.",
+      "image": "assets/Caetan.png"
+    },
+    {
+      "name": "Kai Barrett",
+      "role": "Support Developer",
+      "bio": "Kai contributed to various design and development tasks throughout the project.",
+      "image": "assets/Kai.png"
+    },
+    {
+      "name": "Sylvain Bayonne",
+      "role": "Support Developer",
+      "bio": "Sylvain supported multiple sections of the site during development and team testing.",
+      "image": "assets/Sylvain.jpeg"
+    }
+  ],
+
+  
+    "reservoirInfo": {
+      "title": "Why Reservoirs Matter",
+      "text": "Makers Valley faces a difficult water cycle: flooding in the summer, and water shortages in the winter, while the polluted Jukskei River continues to pose health risks. When it rains in Makers Valley, water floods the roads. When it’s dry, families go without. Without proper storage, the area wastes the water it gets, and suffers when it disappears. Small, decentralized water reservoirs can:",
+      "points": [
+        "Capture excess rain during storms to prevent street flooding",
+        "Provide clean, stored water during dry seasons or outages",
+        "Help in reducing the strain on ageing pipes and drains",
+        "Let the community track and manage levels together"
+      ],
+      "image": "assets/watertower.jpeg"
+    },
+  
+
+  "package": [
+    {
+      "name": "app",
+      "version": "1.0.0",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app.js",
+        "dev": "nodemon app.js"
+      },
+      "author": "",
+      "license": "ISC",
+      "dependencies": {
+        "express": "^4.21.1"
+      },
+      "devDependencies": {
+        "nodemon": "^3.1.7"
+      }
+    }
+  ]
+}

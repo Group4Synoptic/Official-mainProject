@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to ECO4ROWTH">
+    <meta name="keywords" content="Login, ECO4ROWTH, Authentication">
+    <meta name="author" content="ECO4ROWTH Team">
+    <title>Login | ECO4ROWTH</title>
+
+    <!-- Link to the main CSS, JS as well as authentication styles & JS files -->
+    <link rel="stylesheet" href="css/auth-styles.css">
+    <link rel="stylesheet" href="css/design.css">
+    <script src="js/getData.js" defer></script>
+    <script src="js/login.js" defer></script>
+
+</head>
+<body>
+<!-- NAVIGATION BAR -->
+<nav class="nav-wrapper" id="navbar">
+    <div class="nav-content">
+        <!-- Hamburger always far left -->
+        <button id="hamburger" class="hamburger" aria-label="Toggle menu">&#9776;</button>
+        <!-- Logo centered -->
+        <div class="logo-center">
+            <a href="index.html">
+                <img src="assets/WhiteFinal.png" alt="Logo" class="logo-image" />
+            </a>
+        </div>
+        <!-- Desktop menu (centered) -->
+        <ul class="menu" id="menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">Team</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Our Goals <span class="dropdown-arrow">&#9662;</span></a>
+                <div class="dropdown-content">
+                    <a href="goals.html" class="dropdown-main-link">Our Goals</a>
+                    <a href="climate.html">Clean Water</a>
+                    <a href="energy.html">Sustainable Energy</a>
+                    <a href="hunger.html">Community</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Water Demands <span class="dropdown-arrow">&#9662;</span></a>
+                <div class="dropdown-content">
+                    <a href="wd.html" class="dropdown-main-link">Water Demands</a>
+                    <a href="wdTrading.html">Trade Water & Electricity</a>
+                    <a href="findwd.html">Our Water Reservoirs</a>
+                </div>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <!-- Search bar on the right -->
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search..." />
+            <button id="search-button">SEARCH</button>
+        </div>
+    </div>
+</nav>
+
+<!-- MOBILE FULLSCREEN MENU OVERLAY -->
+<!-- Hamburger/X button is always visible in top left for closing -->
+<div class="menu-overlay">
+    <!-- Hamburger/X button for closing the overlay -->
+    <button id="close-menu" class="hamburger close-hamburger" aria-label="Close menu"></button>
+    <ul class="menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">Team</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Our Goals <span class="dropdown-arrow">&#9662;</span></a>
+            <!-- Dropdown panel for Our Goals -->
+            <div class="dropdown-content">
+                <!-- Main link at top, centered -->
+                <a href="goals.html" class="dropdown-main-link">Our Goals</a>
+                <a href="climate.html">Clean Water</a>
+                <a href="energy.html">Sustainable Energy</a>
+                <a href="hunger.html">Community</a>
+                <!-- Back button styled as menu link -->
+                <button class="dropdown-back">← Back</button>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Water Demands <span class="dropdown-arrow">&#9662;</span></a>
+            <!-- Dropdown panel for Water Demands -->
+            <div class="dropdown-content">
+                <a href="WD.html" class="dropdown-main-link">Water Demands</a>
+                <a href="wdTrading.html">Trade Water & Electricity</a>
+                <a href="findwd.html">Our Water Reservoirs</a>
+                <button class="dropdown-back">← Back</button>
+            </div>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</div>
+
+    <!-- MAIN AUTHENTICATION CONTAINER -->
+    <main>
+        <div class="auth-container">
+            <!-- Header section -->
+            <div class="auth-header">
+                <h1 class="auth-title">Welcome Back</h1>
+                <p class="auth-subtitle">Sign in to your ECO4ROWTH account</p>
+            </div>
+
+            <!-- Login form -->
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" name="username" placeholder="Enter your username" required />
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" placeholder="Enter your password" required />
+                </div>
+                <button type="submit">Sign In</button>
+            </form>
+
+            <!-- Login message display -->
+            <div id="loginMessage"></div>
+
+            <!-- Additional links -->
+            <div class="auth-links">
+                <p>Don't have an account? <a href="register.html">Create one here</a></p>
+                <p><a href="index.html">← Back to Home</a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER SECTION (Consistent) -->
+<!-- FOOTER SECTION -->
+<footer>
+    <p>
+        © 2025 ECO4ROWTH - Group 4 in partnership with EWB <br /><br />
+        <a id="CULink" href="contact.html">Contact us</a>
+    </p>
+    <!-- Accessibility controls: dark mode and font size -->
+    <div class="accessibility-controls">
+        <!-- Dark mode toggle as a slider switch -->
+        <label class="switch" aria-label="Toggle dark mode">
+            <input type="checkbox" id="toggle-dark" />
+            <span class="slider"></span>
+            <span class="switch-label">Dark Mode</span>
+        </label>
+        <!-- Font size controls -->
+        <button id="increase-font" aria-label="Increase font size">A+</button>
+        <button id="decrease-font" aria-label="Decrease font size">A-</button>
+    </div>
+</footer>
+</body>
+</html>
