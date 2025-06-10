@@ -1,3 +1,23 @@
+# Version History 10/06/2025 [Caetan DS] 
+
+## Bug fixes (Trading requests/trades not showing correctly now fixed), graph added to the water demands page, additionally the ability to select the reservoir you'd like water from has now been added
+
+* Graph shows the levels of the different water sources as seen here: 
+![image](https://github.com/user-attachments/assets/f2003755-5b30-46c8-bcd1-82063ba65f73)
+
+* This shows the current water available and the water available after a user makes a request.
+* The graph code (using Chart.js) works simply by pulling reservoir data via the database and using the new API route (/reservoirs) this data is then plotted with two bars:
+
+          *Blue bar (Water available): Takes the value of water available from the database
+
+          *Green bar (Water after requests): Takes the requested value and minuses it from the water available.
+  
+* Ability to select reservoir:
+
+![image](https://github.com/user-attachments/assets/8e9e4636-089d-4189-b38b-662b107117e6)
+
+
+        * This still needs to be styled
 # Version History 09/06/2025 [Caetan DS]
 
 ## Added the ability to trade in water for electricity and vice versa
