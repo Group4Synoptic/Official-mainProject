@@ -1,131 +1,145 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="Home page">
-        <meta name="keywords" content="Goals, Content">
-        <meta author="Stevo Asante" content="Stevo Asante">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/design.css">
-        <script src = "js/app.js" defer> </script>
-        <script src="js/getData.js"></script> <!-- ADDED TO ENSURE HAMBURGER FUNCTIONALITY MOBILE - CDS-->
-    </head>
 
-    <body>
-<!-- NAVIGATION BAR -->
-<nav class="nav-wrapper" id="navbar">
-    <div class="nav-content">
-        <!-- Hamburger always far left -->
-        <button id="hamburger" class="hamburger" aria-label="Toggle menu">&#9776;</button>
-        <!-- Logo centered -->
-        <div class="logo-center">
-            <a href="index.html">
-                <img src="assets/WhiteFinal.png" alt="Logo" class="logo-image" />
-            </a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Home page">
+    <meta name="keywords" content="Goals, Content">
+    <meta author="Stevo Asante" content="Stevo Asante">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/design.css">
+    <script src="js/app.js" defer> </script>
+    <script src="js/getData.js"></script> <!-- ADDED TO ENSURE HAMBURGER FUNCTIONALITY MOBILE - CDS-->
+</head>
+
+<body>
+    <!-- NAVIGATION BAR -->
+    <nav class="nav-wrapper" id="navbar">
+        <div class="nav-content">
+            <!-- Hamburger always far left -->
+            <button id="hamburger" class="hamburger" aria-label="Toggle menu">&#9776;</button>
+            <!-- Logo centered -->
+            <div class="logo-center">
+                <a href="index.html">
+                    <img src="assets/WhiteFinal.png" alt="Logo" class="logo-image" />
+                </a>
+            </div>
+            <!-- Desktop menu (centered) -->
+            <ul class="menu" id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Team</a></li>
+                <li class="dropdown">
+                    <a href="#" class="active dropdown-toggle">Our Goals <span class="dropdown-arrow">&#9662;</span></a>
+                    <div class="dropdown-content">
+                        <a href="goals.html" class="dropdown-main-link">Our Goals</a>
+                        <a href="climate.html">Clean Water</a>
+                        <a href="energy.html">Sustainable Energy</a>
+                        <a href="hunger.html">Community</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Water Demands <span class="dropdown-arrow">&#9662;</span></a>
+                    <div class="dropdown-content">
+                        <a href="wd.html" class="dropdown-main-link">Water Demands</a>
+                        <a href="wdTrading.html">Trade Water & Electricity</a>
+                        <a href="findwd.html">Our Water Reservoirs</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <!-- Search bar on the right -->
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search..." />
+                <button id="search-button">SEARCH</button>
+            </div>
         </div>
-        <!-- Desktop menu (centered) -->
-        <ul class="menu" id="menu">
+    </nav>
+
+    <!-- MOBILE FULLSCREEN MENU OVERLAY -->
+    <!-- Hamburger/X button is always visible in top left for closing -->
+    <div class="menu-overlay">
+        <!-- Hamburger/X button for closing the overlay -->
+        <button id="close-menu" class="hamburger close-hamburger" aria-label="Close menu"></button>
+        <ul class="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">Team</a></li>
             <li class="dropdown">
                 <a href="#" class="active dropdown-toggle">Our Goals <span class="dropdown-arrow">&#9662;</span></a>
+                <!-- Dropdown panel for Our Goals -->
                 <div class="dropdown-content">
+                    <!-- Main link at top, centered -->
                     <a href="goals.html" class="dropdown-main-link">Our Goals</a>
                     <a href="climate.html">Clean Water</a>
                     <a href="energy.html">Sustainable Energy</a>
                     <a href="hunger.html">Community</a>
+                    <!-- Back button styled as menu link -->
+                    <button class="dropdown-back">← Back</button>
                 </div>
             </li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle">Water Demands <span class="dropdown-arrow">&#9662;</span></a>
+                <!-- Dropdown panel for Water Demands -->
                 <div class="dropdown-content">
-                    <a href="wd.html" class="dropdown-main-link">Water Demands</a>
+                    <a href="WD.html" class="dropdown-main-link">Water Demands</a>
                     <a href="wdTrading.html">Trade Water & Electricity</a>
                     <a href="findwd.html">Our Water Reservoirs</a>
+                    <button class="dropdown-back">← Back</button>
                 </div>
             </li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <!-- Search bar on the right -->
-        <div class="search-container">
-            <input type="text" id="search-bar" placeholder="Search..." />
-            <button id="search-button">SEARCH</button>
-        </div>
     </div>
-</nav>
 
-<!-- MOBILE FULLSCREEN MENU OVERLAY -->
-<!-- Hamburger/X button is always visible in top left for closing -->
-<div class="menu-overlay">
-    <!-- Hamburger/X button for closing the overlay -->
-    <button id="close-menu" class="hamburger close-hamburger" aria-label="Close menu"></button>
-    <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">Team</a></li>
-        <li class="dropdown">
-            <a href="#" class="active dropdown-toggle">Our Goals <span class="dropdown-arrow">&#9662;</span></a>
-            <!-- Dropdown panel for Our Goals -->
-            <div class="dropdown-content">
-                <!-- Main link at top, centered -->
-                    <a href="goals.html" class="dropdown-main-link">Our Goals</a>
-                    <a href="climate.html">Clean Water</a>
-                    <a href="energy.html">Sustainable Energy</a>
-                    <a href="hunger.html">Community</a>
-                <!-- Back button styled as menu link -->
-                <button class="dropdown-back">← Back</button>
-            </div>
-        </li>
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle">Water Demands <span class="dropdown-arrow">&#9662;</span></a>
-            <!-- Dropdown panel for Water Demands -->
-            <div class="dropdown-content">
-                <a href="WD.html" class="dropdown-main-link">Water Demands</a>
-                <a href="wdTrading.html">Trade Water & Electricity</a>
-                <a href="findwd.html">Our Water Reservoirs</a>
-                <button class="dropdown-back">← Back</button>
-            </div>
-        </li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</div>
+    <!-- MAIN CONTENT -->
 
-        <!-- MAIN CONTENT -->
-          <h2>Working with the Community</h2>
-  
-        <main>
-          <article class="WDArticle fade-in">
-            
+
+    <main>
+        <h2>Working with the Community</h2>
+        <nav>
+            <p>Access to clean water transforms lives. In our partner communities across Africa,
+                water is more than a basic need — it’s a gateway to health, education,
+                economic growth, and dignity. Our commitment goes beyond infrastructure;
+                it’s about empowering local voices, building sustainable systems, and nurturing long-term well-being.
+                Here’s how we’re making it happen.</p>
+        </nav>
+        <article class="WDArticle fade-in">
             <section class="section-content fade-in">
-              <p>Involve residents in monitoring and maintaining the system
-              Work with local charities & businesses 
-              Receive investments/loans from charities to replace old infrastructure
-              </p>
-              <img src="assets/groupinarms.jpg" alt="Water Management" class="section-image" />
+                <h2>Empowering Local Leadership</h2>
+                <ul>
+                    <li>We work hand-in-hand with community leaders to understand their needs.</li><br>
+                    <li>Water projects are managed by local committees trained in maintenance and oversight.</li><br>
+                    <li>Ownership leads to sustainability — when the community leads, the solution lasts.</li><br>
+                </ul>
+                <img src="assets/KENYA_One211.jpg" alt="Water Management" class="section-image" />
             </section>
-                        <section class="section-content fade-in">
-              <p>Involve residents in monitoring and maintaining the system
-              Work with local charities & businesses 
-              Receive investments/loans from charities to replace old infrastructure
-              </p>   
-              <img src="assets/Header1.jpeg" alt="Water Management" class="section-image" />           
+            <section class="section-content fade-in">
+                <h2>Ensuring Sustainability</h2>
+                <ul>
+                    <li>We use durable materials and train residents in upkeep and repair.</li><br>
+                    <li>Systems are designed to suit the local environment and future population growth.</li><br>
+                    <li>Long-term monitoring ensures continued access and functionality.</li><br>
+                </ul>
+                <img src="assets/collectingwater.jpg" alt="Water Management" class="section-image" />
             </section>
-                        <section class="section-content fade-in">
-              <p>Involve residents in monitoring and maintaining the system
-              Work with local charities & businesses 
-              Receive investments/loans from charities to replace old infrastructure
-              </p>
-              <img src="assets/Header1.jpeg" alt="Water Management" class="section-image" />
+            <section class="section-content fade-in">
+                <h2>Promoting Health & Hygiene</h2>
+                <ul>
+                    <li>Clean water reduces waterborne diseases by up to 80%.</li><br>
+                    <li>Hygiene education programs support safe practices at home and in schools.</li><br>
+                    <li>Improved health means fewer sick days, better school attendance, and thriving families.</li><br>
+                </ul>
+                <img src="assets/collectingwater2.jpg" alt="Water Management" class="section-image" />
             </section>
-                        <section class="section-content fade-in">
-              <p>Involve residents in monitoring and maintaining the system
-              Work with local charities & businesses 
-              Receive investments/loans from charities to replace old infrastructure
-              </p>
-              <img src="assets/Header1.jpeg" alt="Water Management" class="section-image" />
+            <section class="section-content fade-in">
+                <h2>Supporting Women & Girls</h2>
+                <ul>
+                    <li>In many areas, women and girls walk miles daily for water.</li><br>
+                    <li>By bringing water closer, we free up time for education, work, and rest.</li><br>
+                    <li>Girls are more likely to stay in school when water and sanitation are accessible.</li><br>
+                </ul>
+                <img src="assets/well.jpeg" alt="Water Management" class="section-image" />
             </section>
-
-          </article>
-
-        </main>
+        </article>
+    </main>
 
 </body>
 
@@ -149,4 +163,5 @@
     </div>
 </footer>
 </body>
+
 </html>
