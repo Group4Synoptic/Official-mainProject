@@ -1,3 +1,4 @@
+
 // Carousel for 3 goals, fetching data from app.json and showing images
 
 document.addEventListener('DOMContentLoaded', () => {

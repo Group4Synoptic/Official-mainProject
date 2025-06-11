@@ -11,6 +11,7 @@
   <!-- Styles and scripts -->
   <link rel="stylesheet" href="css/design.css" />
   <script src="js/getData.js" defer></script>
+  <script src="js/goals-carousel.js" defer></script>
 </head>
 
 <body>
@@ -32,10 +33,10 @@
         <li class="dropdown">
           <a href="#" class="active dropdown-toggle">Our Goals <span class="dropdown-arrow">&#9662;</span></a>
           <div class="dropdown-content">
-                    <a href="goals.html" class="dropdown-main-link">Our Goals</a>
-                    <a href="climate.html">Clean Water</a>
-                    <a href="energy.html">Sustainable Energy</a>
-                    <a href="hunger.html">Community</a>
+            <a href="goals.html" class="active dropdown-main-link">Our Goals</a>
+            <a href="climate.html">Climate Action</a>
+            <a href="energy.html">Clean Energy</a>
+            <a href="hunger.html">Zero Hunger</a>
           </div>
         </li>
         <li class="dropdown">
@@ -69,10 +70,10 @@
         <!-- Dropdown panel for Our Goals -->
         <div class="dropdown-content">
           <!-- Main link at top, centered -->
-                    <a href="goals.html" class="dropdown-main-link">Our Goals</a>
-                    <a href="climate.html">Clean Water</a>
-                    <a href="energy.html">Sustainable Energy</a>
-                    <a href="hunger.html">Community</a>
+          <a href="goals.html" class="active dropdown-main-link">Our Goals</a>
+          <a href="climate.html">Climate Action</a>
+          <a href="energy.html">Clean Energy</a>
+          <a href="hunger.html">Zero Hunger</a>
           <!-- Back button styled as menu link -->
           <button class="dropdown-back">← Back</button>
         </div>
@@ -95,28 +96,14 @@
 
   <!-- GOALS SECTION (Loaded Dynamically) -->
   <main>
-    
-    <section class="section-content fade-in">
-      <h2>Our Sustainable Goals</h2>
-      <p>
-        These are the 3 goals we’re tackling in Makers Valley with a tech-driven, community-first approach. <br>
-        These goals are aligned with the UN’s 2030 Sustainable Development framework.
-      </p>
-    </section>
-
-    <!-- This is where the goal cards will appear via JS -->
-<div class="goals-flex-wrapper">
-  <!-- Two smaller goal cards go here -->
-  <div class="goals-left">
-    <div id="goal-climate"></div>
-    <div id="goal-energy"></div>
-  </div>
-  <!-- One big goal card goes here -->
-  <div class="goals-right">
-    <div id="goal-hunger"></div>
-  </div>
-</div>
-  </main>
+    <div class="goals-carousel-container">
+      <button class="carousel-arrow left" aria-label="Previous goal">&#8592;</button>
+      <div class="goals-carousel" id="goals-carousel">
+        <!-- JS will load the 3 visible goals as a carousel -->
+      </div>
+      <button class="carousel-arrow right" aria-label="Next goal">&#8594;</button>
+    </div>
+    </main>
 
   <!-- FOOTER SECTION -->
   <footer>
