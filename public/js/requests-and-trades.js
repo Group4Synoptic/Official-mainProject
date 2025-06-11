@@ -224,4 +224,49 @@ async function renderReservoirGraph() {
   });
 }
 
+// --- TRADE FORM SUBMISSION ---
+const tradeForm = document.getElementById('trade-form');
+if (tradeForm) {
+  tradeForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const trade_direction = document.getElementById('trade-direction').value;
+    const amount_in = Number(document.getElementById('trade-amount').value);
+    const contact_info = document.getElementById('trade-contact').value;
+
+    const data = {
+      trade_direction,
+      amount_in,
+      contact_info
+    };
+
+    try {
+      const response = await fetch('/api/trades', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      if (!response.ok) {
+        let errorMsg = 'Something went wrong';
+        const contentType = response.headers.get('content-type') || '';
+        if (contentType.includes('application/json')) {
+          const errData = await response.json();
+          errorMsg = errData.message || errorMsg;
+        } else {
+          errorMsg = await response.text();
+        }
+        throw new Error(errorMsg);
+      }
+
+      const result = await response.json();
+      alert(result.message || 'Trade submitted!');
+
+    } catch (err) {
+      alert(err.message || 'Something went wrong');
+      console.error(err);
+    }
+  });
+}
+
 

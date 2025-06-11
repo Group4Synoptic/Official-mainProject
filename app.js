@@ -220,7 +220,7 @@ app.get('/api/water-request', isAuthenticated, async (req, res) => {
 
 
 //  Trading
-app.post("/api/trade", async (req, res) => {
+app.post("/api/trades", async (req, res) => {
   try {
     const { trade_direction, amount_in, contact_info } = req.body;
     const user_id = req.session.user?.id;
