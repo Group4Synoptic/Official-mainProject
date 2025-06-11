@@ -4,7 +4,7 @@
       "title": "Clean Water",
       "desc": "Promoting sustainable practices and reducing carbon footprint in Makers Valley.",
       "link": "climate.html",
-      "image": "assets/crops.jpg"
+      "image": "assets/washing-hands.png"
     },
     {
       "title": "Sustainable Energy",
@@ -14,9 +14,9 @@
     },
     {
       "title": "Community",
-      "desc": "Ensuring food security and improved nutrition through community gardens and local support.",
+      "desc": "Working with the community and local businesses to create a new Makers Valley",
       "link": "hunger.html",
-      "image": "assets/climate.jpg"
+      "image": "assets/target.gif"
     }
   ],
 
