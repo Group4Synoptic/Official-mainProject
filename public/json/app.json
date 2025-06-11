@@ -22,14 +22,14 @@
 
   "climate": [
     {
-      "url": "assets/climate.jpg",
+      "url": "assets/drinkingwater.jpg",
       "alt": "Climate Awareness image",
       "caption": [
-        "Climate change is an evergrowing issue in today's world, projected to worsen and deeply impact our environment and daily lives.",
-        "Those in under-developed countries will be the most affected, facing water and food shortages.",
-        "To address this, the UN has launched a set of regulations to combat Climate Change under the 2030 SDG agenda.",
-        "These include strengthening resilience to climate disasters, integrating climate policies, raising awareness, and global cooperation through the Paris Agreement.",
-        "Together, these initiatives support renewables, sustainable cities, and protect vulnerable communities for a low-carbon future."
+        "Our mission is to provide clean, drinkable water to communities by implementing sustainable,",
+         "locally sourced filtration systems. By doing so, we aim to reduce reliance on the increasingly",
+          "unreliable municipal water infrastructure. This initiative not only ensures consistent access" ,
+          "to safe water but also significantly enhances the hygiene, health, and overall dignity of residents,",
+           "empowering them with a vital resource for daily life."
       ]
     }
   ],
