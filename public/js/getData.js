@@ -69,8 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
           // Create the image for the goal.
           const img = document.createElement('img');
-          img.src = goal.url;      // Set the image source.
-          img.alt = goal.alt;      // Set the alt text for accessibility.
+          img.src = goal.image;      // Set the image source.
+          img.alt = goal.title;      // Set the alt text for accessibility.
           img.classList.add('goal-image');
 
           // Create a caption for the image.
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
           // Create a link inside the caption.
           const link = document.createElement('a');
           link.href = goal.link;           // Where the link goes.
-          link.textContent = goal.caption; // The text for the link.
+          link.textContent = goal.title; // The text for the link.
           link.classList.add('goal-link');
 
           // Put the link inside the caption.
